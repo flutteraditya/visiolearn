@@ -178,7 +178,7 @@ Future<bool> modelSelection(BuildContext context,String str) async{
     prompt = "describe ethyne structure";
   }
   else if(str == "propane"){
-    modelName = "che/propane.glb";
+    modelName = "che/butane.glb";
     prompt = "describe propane structure";
   }
   else if(str == "propene"){
