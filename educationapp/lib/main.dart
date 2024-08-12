@@ -10,9 +10,9 @@ dynamic db;
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
-  db = openDatabase(
-    join(await getDatabasesPath(),"a.db"),
-    version: 1,
+  db = await openDatabase(
+    join(await getDatabasesPath(),"axx.db"),
+    version: 2,
     onCreate: (db, version) async{
       await db.execute(
         '''
@@ -43,7 +43,7 @@ void main() async{
             batch3 TEXT,
             batch4 TEXT,
             img TEXT,
-            amount INT
+            amount INTEGER
           )
         '''
       );
@@ -52,7 +52,7 @@ void main() async{
           CREATE TABLE userCourses(
             myCourseId INTEGER PRIMARY KEY,
             userName TEXT,
-            courseId INT
+            courseId INTEGER
           )
         '''
       );
@@ -103,7 +103,7 @@ Future<List<Map<String,dynamic>>> getData(String tableName)async{
 
   List<Map<String,dynamic>> lst = await localdb.query(tableName);
 
-  //print("getData");
+  print("getData");
   
   return lst;
 }
