@@ -6,7 +6,7 @@ import 'package:path/path.dart';
 import 'login.dart';
 
 dynamic db;
-
+//main start from here
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
